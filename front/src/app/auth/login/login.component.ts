@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {
     this.user = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      email: ['k.popkov@bk.ru', [Validators.required, Validators.email]],
+      password: ['3', Validators.required],
     });
 
   }
@@ -27,6 +27,6 @@ export class LoginComponent implements OnInit {
 
   logForm() {
 
-    this.router.navigate(['']);
+    this.router.navigate(['profile']);
   }
 }

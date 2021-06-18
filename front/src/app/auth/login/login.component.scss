@@ -1,38 +1,24 @@
-.app-name {
-  text-align: center;
-}
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-  margin-top: 30vh;
+.body-background {
+  height: 100vh;
+  background: #424747;
+  //background-image: linear-gradient(to right top, #be2b45, #c9005e, #c40087, #a300bd, #0812f8)
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.card {
+  width: 400px;
+  border: none
 }
 
-.btn-primary {
-  display: block;
-  width: 100px;
-
+.form-control {
+  height: 45px;
+  border-radius: 10px
 }
 
+.form-control:focus {
+  box-shadow: none
+}
+
+.btn-signup {
+  height: 50px;
+  border-radius: 10px
+}
