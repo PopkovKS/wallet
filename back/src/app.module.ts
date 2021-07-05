@@ -5,6 +5,8 @@ import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { RolesModule } from './roles/roles.module';
 import { Role } from './roles/roles.model';
+import { UserRoles } from './roles/user-roles.model';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,11 +20,12 @@ import { Role } from './roles/roles.model';
       username: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
       database: process.env.MYSQL_DB,
-      models: [User, Role],
+      models: [User, Role, UserRoles],
       autoLoadModels: true,
     }),
     UsersModule,
     RolesModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

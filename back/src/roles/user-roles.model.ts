@@ -6,8 +6,9 @@ import {
   Table,
 } from 'sequelize-typescript';
 import { Role } from './roles.model';
+import { User } from '../users/users.model';
 
-@Table({ tableName: 'user_roles' })
+@Table({ tableName: 'user_roles', createdAt: false, updatedAt: false })
 export class UserRoles extends Model<UserRoles> {
   @Column({
     type: DataType.INTEGER,
@@ -21,7 +22,7 @@ export class UserRoles extends Model<UserRoles> {
     type: DataType.INTEGER,
   })
   roleId: number;
-
+  @ForeignKey(() => User)
   @Column({
     type: DataType.INTEGER,
   })
