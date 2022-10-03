@@ -27,6 +27,6 @@ export class LoginComponent implements OnInit {
 
   logForm() {
 
-    this.router.navigate(['profile']);
+    this.router.navigate(['dashboard']);
   }
 }
